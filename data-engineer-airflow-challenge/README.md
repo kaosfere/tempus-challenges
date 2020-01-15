@@ -23,7 +23,7 @@ in something of this scope.   Expected exceptions from NewsAPI or the
 readability library have been handled already, while any gross failures will
 be raised up the stack.  I have made a conscious decision not to unlink
 our temporary files when we're done with them.  This will allow them to
-persist in the scratch-space so they can be examed after potential failures,
+persist in the scratch-space so they can be examined after potential failures,
 should that be useful.  This could easily be changed if that's not desired
 behavior.
 
@@ -32,8 +32,8 @@ the upload of the files to S3 -- reading them back and doing a checksum to
 verify accuracy might be a good future enhancement, for example.  Another
 area for growth there would be cleaner handling of protocol-level failures
 from boto3.   At this point a single failed upload will fail the entire process,
-but we might want to allow as many as possible succeed and report on failures
-at the end so we know about them.
+but we might want to allow as many as possible to succeed and report on
+failures at the end so we know about them.
 
 For AWS interactions I decided to let boto3 use its own standard credential
 resolution method, so it'll check `~/.aws`, environment variables, and all
