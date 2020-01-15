@@ -10,3 +10,8 @@
 
 # System Files
 .DS_Store
+
+.pytest_cache/
+.vscode/
+.coverage
+htmlcov/
